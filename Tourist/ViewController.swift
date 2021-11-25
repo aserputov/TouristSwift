@@ -28,14 +28,14 @@ class ViewController: UIViewController {
 //            print(results!.count)
             
             for document in results!.documents{
-                let dc = document.data()
+//                let dc = document.data()
 //                print(dc["price"])
 //                print(dc["title"])
 //                print(dc["stars"])
                 
                 do {
                     let trips = try  document.data(as: Trip.self)
-                    print(trips?.id)
+                    print(trips?.id as Any)
                     print(trips?.title)
                     print(trips?.price)
                     print(trips?.photoLink)
