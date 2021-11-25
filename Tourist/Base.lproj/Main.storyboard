@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="3683" y="138"/>
         </scene>
-        <!--My Trips-->
+        <!--second-->
         <scene sceneID="f3P-vB-ks1">
             <objects>
-                <viewController id="IMF-ca-kmN" sceneMemberID="viewController">
+                <viewController title="second" id="IMF-ca-kmN" customClass="SecondViewController" customModule="Tourist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JGE-US-4wI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,6 +62,9 @@
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Trips" id="RZv-Qe-HS7"/>
+                    <connections>
+                        <outlet property="Change" destination="EYa-4o-Q13" id="2Xi-YY-ALc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YBQ-u5-7qd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
