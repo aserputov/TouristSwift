@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var count:Int = 0 ;
     var tripsList:[Trip] = []
     let db = Firestore.firestore()
-    
+    var checkStars:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,13 +60,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        checkStars = ""
         let cell = MyTable.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! TripTableViewCell
         
         let curTrip:Trip = self.tripsList[indexPath.row]
         
         cell.TripTitleLabel.text = "\(curTrip.title)"
         cell.TripPriceLabel.text = "\(curTrip.price)"
+        for index in 1...curTrip.stars {
+            checkStars = "⭐️" + checkStars;
+        }
+        cell.TripStarsLabel.text = checkStars
+        
+      
+//        cell.TripImg
         
 //        print(curTrip.title)
 //        cell.tableViewLabel.text = "curTrip.title"
