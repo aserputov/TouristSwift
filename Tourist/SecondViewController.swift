@@ -91,7 +91,23 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){}
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+        
+        let currTask = self.tripsList[indexPath.row]
+        
+        
+        db.collection("myTrips").document(currTask.id!).delete{
+            (error) in
+            if let err = error{
+                print(err)
+            }
+            print("ok deleted")
+        }
+        
+        self.tripsList.remove(at: indexPath.row)
+        self.MyTable2.deleteRows(at: [indexPath], with: .fade)
+        
+    }
     
 
     @IBAction func get(_ sender: Any) {

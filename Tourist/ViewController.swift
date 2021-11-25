@@ -72,6 +72,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         cell.TripStarsLabel.text = checkStars
         
+       
       
 //        cell.TripImg
         
@@ -94,6 +95,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){}
+    
     
 
     @IBAction func get(_ sender: Any) {

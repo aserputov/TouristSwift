@@ -17,11 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="125" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iUD-TI-UjH">
-                                <rect key="frame" x="0.0" y="33" width="414" height="681"/>
+                                <rect key="frame" x="0.0" y="109" width="414" height="649"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationLevel="2" indentationWidth="23" reuseIdentifier="myCell" rowHeight="125" translatesAutoresizingMaskIntoConstraints="NO" id="FBr-1q-rUW" customClass="TripTableViewCell" customModule="Tourist" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationLevel="2" indentationWidth="23" reuseIdentifier="myCell" rowHeight="125" translatesAutoresizingMaskIntoConstraints="NO" id="FBr-1q-rUW" customClass="TripTableViewCell" customModule="Tourist" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FBr-1q-rUW" id="YkG-RS-ltH">
@@ -50,6 +50,9 @@
                                                     <state key="normal" title="Add">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="save:" destination="FBr-1q-rUW" eventType="touchUpInside" id="bh6-Hy-Kcr"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CX7-dx-99E">
                                                     <rect key="frame" x="157" y="93" width="128" height="21"/>
