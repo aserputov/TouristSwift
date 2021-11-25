@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         MyTable.dataSource = self
         MyTable.delegate = self
         
-        db.collection("myTrips").getDocuments { (results, error) in
+        db.collection("activities").getDocuments { (results, error) in
             if let err = error{
                 print("shot")
                 print(err)
