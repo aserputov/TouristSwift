@@ -66,6 +66,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let curTrip:Trip = self.tripsList[indexPath.row]
         
         cell.TripTitleLabel.text = "\(curTrip.title)"
+        cell.TripPriceLabel.text = "\(curTrip.price)"
         
 //        print(curTrip.title)
 //        cell.tableViewLabel.text = "curTrip.title"
