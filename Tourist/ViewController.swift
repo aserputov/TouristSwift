@@ -11,22 +11,67 @@ import FirebaseFirestore
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var MyTable: UITableView!
+    var count:Int = 0 ;
     let db = Firestore.firestore()
 
     override func viewDidLoad() {
+       
+       
+        
         super.viewDidLoad()
         MyTable.dataSource = self
         MyTable.delegate = self
     }
     
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {return 4 }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+      
+//        print(self.count)
+        return 4
+        
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = MyTable.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
         
-        print(indexPath.row)
+        db.collection("activities").getDocuments { (results, error) in
+            if let err = error{
+                print("shot")
+                print(err)
+                return
+            }
+//            print(results!.count)
+            self.count = results!.count
+            print(self.count)
+            
+            
+            for document in results!.documents{
+//                let dc = document.data()
+//                print(dc["price"])
+//                print(dc["title"])
+//                print(dc["stars"])
+                
+                do {
+                    let trips = try  document.data(as: Trip.self)
+                    print(trips?.id as Any)
+                    print(trips?.title as Any)
+                    print(trips?.price as Any)
+                    print(trips?.photoLink as Any)
+                    cell.textLabel!.text = "\(trips?.id)"
+                    cell.detailTextLabel!.text = "\(trips?.title)"
+                }catch{
+                    print("Hm Hm error")
+                }
+                
+            }
+            
+         
+        }
+        
+       
+        
+//        print(indexPath.row)
         
         cell.textLabel!.text = "OKSSKSKSK"
         cell.detailTextLabel!.text = "ok"
@@ -47,34 +92,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
 
     @IBAction func get(_ sender: Any) {
-        db.collection("activities").getDocuments { (results, error) in
-            if let err = error{
-                print("shot")
-                print(err)
-                return
-            }
-//            print(results!.count)
-            
-            for document in results!.documents{
-//                let dc = document.data()
-//                print(dc["price"])
-//                print(dc["title"])
-//                print(dc["stars"])
-                
-                do {
-                    let trips = try  document.data(as: Trip.self)
-                    print(trips?.id as Any)
-                    print(trips?.title)
-                    print(trips?.price)
-                    print(trips?.photoLink)
-                }catch{
-                    print("Hm Hm error")
-                }
-                
-            }
-            
-         
-        }
+       
     }
 }
 
