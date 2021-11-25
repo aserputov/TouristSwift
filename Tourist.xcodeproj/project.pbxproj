@@ -22,6 +22,7 @@
 		01C14520274F2D46009C21BE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 01C1451F274F2D46009C21BE /* FirebaseFirestore */; };
 		01C14522274F2D46009C21BE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 01C14521274F2D46009C21BE /* FirebaseDatabase */; };
 		01C14524274F5F06009C21BE /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C14523274F5F06009C21BE /* Trip.swift */; };
+		01C14526274F6D7E009C21BE /* MyTrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C14525274F6D7E009C21BE /* MyTrips.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		01C1450A274E6FB2009C21BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01C14516274F2C97009C21BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		01C14523274F5F06009C21BE /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		01C14525274F6D7E009C21BE /* MyTrips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTrips.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				01C144F4274E6FB2009C21BE /* Info.plist */,
 				01C14516274F2C97009C21BE /* GoogleService-Info.plist */,
 				01C14523274F5F06009C21BE /* Trip.swift */,
+				01C14525274F6D7E009C21BE /* MyTrips.swift */,
 			);
 			path = Tourist;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01C14526274F6D7E009C21BE /* MyTrips.swift in Sources */,
 				01C14524274F5F06009C21BE /* Trip.swift in Sources */,
 				01C144EB274E6FB1009C21BE /* ViewController.swift in Sources */,
 				01C144E7274E6FB1009C21BE /* AppDelegate.swift in Sources */,
