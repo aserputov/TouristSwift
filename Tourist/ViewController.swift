@@ -25,14 +25,26 @@ class ViewController: UIViewController {
                 print(err)
                 return
             }
-            print(results!.count)
+//            print(results!.count)
             
             for document in results!.documents{
                 let dc = document.data()
-                print(dc["price"])
-                print(dc["title"])
-                print(dc["stars"])
+//                print(dc["price"])
+//                print(dc["title"])
+//                print(dc["stars"])
+                
+                do {
+                    let trips = try  document.data(as: Trip.self)
+                    print(trips?.id)
+                    print(trips?.title)
+                    print(trips?.price)
+                    print(trips?.photoLink)
+                }catch{
+                    print("Hm Hm error")
+                }
+                
             }
+            
          
         }
     }

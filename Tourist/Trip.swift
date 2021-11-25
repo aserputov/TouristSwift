@@ -10,10 +10,10 @@ import FirebaseFirestoreSwift
 
 
 struct Trip:Codable{
-    @DocumentID var id:String
+    @DocumentID var id:String?
     var title:String = "";
     var stars:Int = 0;
     var price:Int = 0;
-    var images:String = ""
+    var photoLink:String = ""
     
 }
