@@ -61,11 +61,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = MyTable.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        let cell = MyTable.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! TripTableViewCell
         
         let curTrip:Trip = self.tripsList[indexPath.row]
-        cell.textLabel!.text = "\(curTrip.id)"
-        cell.detailTextLabel!.text = "\(curTrip.title)"
+        
+        cell.TripTitleLabel.text = "\(curTrip.title)"
+        
+//        print(curTrip.title)
+//        cell.tableViewLabel.text = "curTrip.title"
+//        cell.textLabel!.text = "\(curTrip.id)"
+//        cell.detailTextLabel!.text = "\(curTrip.title)"
      
         
         return cell

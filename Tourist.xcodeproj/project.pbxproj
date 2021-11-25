@@ -24,7 +24,7 @@
 		01C14524274F5F06009C21BE /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C14523274F5F06009C21BE /* Trip.swift */; };
 		01C14526274F6D7E009C21BE /* MyTrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C14525274F6D7E009C21BE /* MyTrips.swift */; };
 		01C14528274F8598009C21BE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C14527274F8598009C21BE /* SecondViewController.swift */; };
-		01C1452C274FB431009C21BE /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C1452B274FB431009C21BE /* CustomTableView.swift */; };
+		01C1452E274FC305009C21BE /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C1452D274FC305009C21BE /* TripTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +63,7 @@
 		01C14523274F5F06009C21BE /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		01C14525274F6D7E009C21BE /* MyTrips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTrips.swift; sourceTree = "<group>"; };
 		01C14527274F8598009C21BE /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		01C1452B274FB431009C21BE /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
+		01C1452D274FC305009C21BE /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,6 @@
 		01C144DA274E6FB1009C21BE = {
 			isa = PBXGroup;
 			children = (
-				01C1452B274FB431009C21BE /* CustomTableView.swift */,
 				01C144E5274E6FB1009C21BE /* Tourist */,
 				01C144FC274E6FB2009C21BE /* TouristTests */,
 				01C14507274E6FB2009C21BE /* TouristUITests */,
@@ -131,6 +130,7 @@
 				01C14523274F5F06009C21BE /* Trip.swift */,
 				01C14525274F6D7E009C21BE /* MyTrips.swift */,
 				01C14527274F8598009C21BE /* SecondViewController.swift */,
+				01C1452D274FC305009C21BE /* TripTableViewCell.swift */,
 			);
 			path = Tourist;
 			sourceTree = "<group>";
@@ -295,10 +295,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				01C14526274F6D7E009C21BE /* MyTrips.swift in Sources */,
+				01C1452E274FC305009C21BE /* TripTableViewCell.swift in Sources */,
 				01C14524274F5F06009C21BE /* Trip.swift in Sources */,
 				01C144EB274E6FB1009C21BE /* ViewController.swift in Sources */,
 				01C144E7274E6FB1009C21BE /* AppDelegate.swift in Sources */,
-				01C1452C274FB431009C21BE /* CustomTableView.swift in Sources */,
 				01C14528274F8598009C21BE /* SecondViewController.swift in Sources */,
 				01C144E9274E6FB1009C21BE /* SceneDelegate.swift in Sources */,
 			);

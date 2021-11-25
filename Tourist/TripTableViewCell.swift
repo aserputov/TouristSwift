@@ -1,5 +1,5 @@
 //
-//  CustomTableView.swift
+//  TripTableViewCell.swift
 //  Tourist
 //
 //  Created by Anatoliy Serputov on 2021-11-25.
@@ -7,8 +7,10 @@
 
 import UIKit
 
-class CustomTableView: UITableViewCell {
+class TripTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var TripTitleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
