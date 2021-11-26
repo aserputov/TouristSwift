@@ -157,7 +157,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="refresh"/>
                                 <connections>
-                                    <action selector="refresh:" destination="IMF-ca-kmN" eventType="touchUpInside" id="43F-n5-tmz"/>
+                                    <action selector="CleanALL:" destination="IMF-ca-kmN" eventType="touchUpInside" id="1GT-3G-sqG"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -141,7 +141,19 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
 
-    @IBAction func get(_ sender: Any) {
-       
+    @IBAction func CleanALL(_ sender: Any) {
+        for trip in tripsList {
+            db.collection("myTrips").document(trip.id!).delete{
+                (error) in
+                if let err = error{
+                    print(err)
+                }
+                print("ok deleted")
+            }
+        }
+        print(tripsList.count)
+        tripsList.removeAll()
+        self.MyTable2.reloadData()
+        
     }
 }
