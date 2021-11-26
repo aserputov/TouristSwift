@@ -59,20 +59,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         checkStars = ""
         let cell = MyTable.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! TripTableViewCell
         
         let curTrip:Trip = self.tripsList[indexPath.row]
         
-        cell.TripTitleLabel.text = "\(curTrip.title)"
+        cell.TripTitleLabel.text = "\(curTrip.id)"
         cell.TripPriceLabel.text = "\(curTrip.price)"
         for index in 1...curTrip.stars {
             checkStars = "⭐️" + checkStars;
         }
         cell.TripStarsLabel.text = checkStars
+//        print(curTrip.id!)
+        let check = curTrip.id!
+        cell.TripButtonLabel.accessibilityLabel = "\(check)"
         
-       
+        print(cell.TripButtonLabel.accessibilityLabel)
+        
+//        cell.subscribeButton.addTarget(self, action: #selector((_:)), for: .touchUpInside)
+             
+        
+//        cell.TripButtonLabel.addTarget(self, action: #selector(subscribeTapped(_:)), for: .touchUpInside)
       
 //        cell.TripImg
         
@@ -83,7 +92,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
      
         
         return cell
-    }
+    }    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -91,15 +100,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         print(indexPath.row)
-        
     }
+    
+    
+    @objc func pressButton(button: UIButton) {
+        print("Button with tag: \(button.tag) clicked!")
+    }
+    
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){}
     
-    
 
-    @IBAction func get(_ sender: Any) {
-       
-    }
 }
 

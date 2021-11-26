@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationLevel="2" indentationWidth="23" reuseIdentifier="myCell" rowHeight="125" translatesAutoresizingMaskIntoConstraints="NO" id="FBr-1q-rUW" customClass="TripTableViewCell" customModule="Tourist" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationLevel="2" indentationWidth="23" reuseIdentifier="myCell" rowHeight="125" translatesAutoresizingMaskIntoConstraints="NO" id="FBr-1q-rUW" customClass="TripTableViewCell" customModule="Tourist" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FBr-1q-rUW" id="YkG-RS-ltH">
@@ -42,18 +42,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Um3-yi-3jh">
-                                                    <rect key="frame" x="333" y="45" width="74" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="linkColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <state key="normal" title="Add">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="save:" destination="FBr-1q-rUW" eventType="touchUpInside" id="bh6-Hy-Kcr"/>
-                                                    </connections>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CX7-dx-99E">
                                                     <rect key="frame" x="157" y="93" width="128" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -65,10 +53,19 @@
                                                     <rect key="frame" x="157" y="24" width="59" height="38"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ID-Vl-94Q">
+                                                    <rect key="frame" x="342" y="48" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="add"/>
+                                                    <connections>
+                                                        <action selector="ButtonClicked:" destination="FBr-1q-rUW" eventType="touchUpInside" id="amy-QK-kZu"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="TripButtonLabel" destination="7ID-Vl-94Q" id="sAI-Ls-HBz"/>
                                             <outlet property="TripPriceLabel" destination="IWM-bN-JdP" id="cfQ-qX-LhB"/>
                                             <outlet property="TripStarsLabel" destination="CX7-dx-99E" id="ZAL-XD-03D"/>
                                             <outlet property="TripTitleLabel" destination="nrs-0g-vEW" id="4N5-pm-oWR"/>
