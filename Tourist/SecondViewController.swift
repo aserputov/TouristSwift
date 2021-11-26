@@ -109,6 +109,37 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+//        tripsList.removeAll()
+        
+        db.collection("myTrips").getDocuments { (results, error) in
+            if let err = error{
+                print("shot")
+                print(err)
+                return
+            }
+            
+            
+            for document in results!.documents{
+
+                do {
+                    let trips = try  document.data(as: Trip.self)
+                    self.tripsList.append(trips!)
+//                    print(trips)
+//                    print(trips?.id as Any)
+//                    print(trips?.title as Any)
+//                    print(trips?.price as Any)
+//                    print(trips?.photoLink as Any)
+//
+                    
+                }catch{
+                    print("Hm Hm error")
+                }
+                
+            }
+            self.MyTable2.reloadData()
+        }
+    }
 
     @IBAction func get(_ sender: Any) {
        

@@ -13,7 +13,7 @@ class TripTableViewCell: UITableViewCell {
     var tripsList:[Trip] = []
     @IBOutlet weak var TripTitleLabel: UILabel!
     @IBOutlet weak var TripPriceLabel: UILabel!
-    
+    let refreshControl = UIRefreshControl()
     let db = Firestore.firestore()
     
     @IBOutlet weak var TripButtonLabel: UIButton!
@@ -33,6 +33,7 @@ class TripTableViewCell: UITableViewCell {
 
     @IBAction func ButtonClicked(_ sender: Any) {
         let check = (sender as AnyObject).accessibilityLabel
+        let check1 = (sender as AnyObject).tag
         let secondCheck = check!
         if secondCheck != nil {
 //            print("Contains a value!")
@@ -58,12 +59,10 @@ class TripTableViewCell: UITableViewCell {
                             let stars2 = trips!.stars as Int
                             let price2 = trips!.price as Int
                             let photoLink = trips!.photoLink as Any
-                            print(price2)
-                            print(stars2)
+                            print(title)
+//                            print(stars2)
                             taskToAdd = MyTrip(id:secondCheck!, title: "\(title)",stars: stars2, price: price2, photoLink: "\(photoLink)")
-                         
-                          
-                           
+
                             
 //                            print(title)
 //                            let price = Int(trips?.price as Any);
@@ -91,10 +90,7 @@ class TripTableViewCell: UITableViewCell {
                     print("Document does not exist")
                 }
             }
-           
-            
-            
-
+     
         } else {
             print("Doesn’t contain a value.")
         }

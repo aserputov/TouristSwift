@@ -66,7 +66,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let curTrip:Trip = self.tripsList[indexPath.row]
         
-        cell.TripTitleLabel.text = "\(curTrip.id)"
+        cell.TripTitleLabel.text = "\(curTrip.title)"
         cell.TripPriceLabel.text = "\(curTrip.price)"
         for index in 1...curTrip.stars {
             checkStars = "⭐️" + checkStars;
@@ -75,6 +75,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        print(curTrip.id!)
         let check = curTrip.id!
         cell.TripButtonLabel.accessibilityLabel = "\(check)"
+        cell.TripButtonLabel.tag = indexPath.row
         
 //        print(cell.TripButtonLabel.accessibilityLabel)
         
@@ -100,11 +101,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         print(indexPath.row)
-    }
-    
-    
-    @objc func pressButton(button: UIButton) {
-        print("Button with tag: \(button.tag) clicked!")
     }
     
     
