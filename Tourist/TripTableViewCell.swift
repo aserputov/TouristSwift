@@ -35,13 +35,14 @@ class TripTableViewCell: UITableViewCell {
         let check = (sender as AnyObject).accessibilityLabel
         let secondCheck = check!
         if secondCheck != nil {
-            print("Contains a value!")
+//            print("Contains a value!")
 //            print(secondCheck!)
             
             
             let docRef = db.collection("activities").document("\(secondCheck!)")
             let docRe2 = db.collection("myTrips");
-
+            var taskToAdd = MyTrip(id:secondCheck!, title: "ok",stars: 5 , price: 40, photoLink: "/")
+            
             docRef.getDocument { (document, error) in
                 if let document = document, document.exists {
 //                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
@@ -53,18 +54,26 @@ class TripTableViewCell: UITableViewCell {
                             let trips = try  document.data(as: Trip.self)
                             self.tripsList.append(trips!)
 //                            print(trips)
-                            print(trips?.title as Any)
- 
+                            let title = trips!.title as Any
+                            let stars2 = trips!.stars as Int
+                            let price2 = trips!.price as Int
+                            let photoLink = trips!.photoLink as Any
+                            print(price2)
+                            print(stars2)
+                            taskToAdd = MyTrip(id:secondCheck!, title: "\(title)",stars: stars2, price: price2, photoLink: "\(photoLink)")
+                         
+                          
+                           
+                            
+//                            print(title)
+//                            let price = Int(trips?.price as Any);
+                            
                             
                         }catch{
                             print("Hm Hm error")
                         }
-                        
                     
-                    
-                    
-                    
-                    let taskToAdd = MyTrip(id:secondCheck!, title: "ok",stars: 5 , price: 40, photoLink: "/")
+//                    let taskToAdd = MyTrip(id:secondCheck!, title: "ok",stars: 5 , price: 40, photoLink: "/")
   
                     do{
                         try docRe2.addDocument(from: taskToAdd) { err in

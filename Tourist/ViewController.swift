@@ -76,7 +76,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let check = curTrip.id!
         cell.TripButtonLabel.accessibilityLabel = "\(check)"
         
-        print(cell.TripButtonLabel.accessibilityLabel)
+//        print(cell.TripButtonLabel.accessibilityLabel)
         
 //        cell.subscribeButton.addTarget(self, action: #selector((_:)), for: .touchUpInside)
              
