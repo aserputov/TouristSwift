@@ -67,8 +67,8 @@
                                                         <action selector="ButtonClicked:" destination="FBr-1q-rUW" eventType="touchUpInside" id="amy-QK-kZu"/>
                                                     </connections>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.3.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Fsx-Y1-Czo">
-                                                    <rect key="frame" x="231" y="11.5" width="170" height="60"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lix-BP-W89">
+                                                    <rect key="frame" x="222" y="7" width="179" height="66"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -76,6 +76,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="TripButtonLabel" destination="7ID-Vl-94Q" id="sAI-Ls-HBz"/>
+                                            <outlet property="TripImgLabel" destination="lix-BP-W89" id="aef-RP-ezi"/>
                                             <outlet property="TripPriceLabel" destination="IWM-bN-JdP" id="cfQ-qX-LhB"/>
                                             <outlet property="TripStarsLabel" destination="CX7-dx-99E" id="ZAL-XD-03D"/>
                                             <outlet property="TripTitleLabel" destination="nrs-0g-vEW" id="4N5-pm-oWR"/>

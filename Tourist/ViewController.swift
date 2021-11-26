@@ -68,6 +68,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cell.TripTitleLabel.text = "\(curTrip.title)"
         cell.TripPriceLabel.text = "$\(curTrip.price).00"
+        cell.TripImgLabel.image = #imageLiteral(resourceName: "first")
+//        cell.TripImgLabel.image = #imageLiteral(resourceName: "first")
         for index in 1...curTrip.stars {
             checkStars = "⭐️" + checkStars;
         }

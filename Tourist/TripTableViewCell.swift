@@ -13,6 +13,7 @@ class TripTableViewCell: UITableViewCell {
     var tripsList:[Trip] = []
     @IBOutlet weak var TripTitleLabel: UILabel!
     @IBOutlet weak var TripPriceLabel: UILabel!
+    @IBOutlet weak var TripImgLabel: UIImageView!
     let refreshControl = UIRefreshControl()
     let db = Firestore.firestore()
     
