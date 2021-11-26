@@ -110,7 +110,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        tripsList.removeAll()
+        tripsList.removeAll()
         
         db.collection("myTrips").getDocuments { (results, error) in
             if let err = error{
