@@ -67,7 +67,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let curTrip:Trip = self.tripsList[indexPath.row]
         
         cell.TripTitleLabel.text = "\(curTrip.title)"
-        cell.TripPriceLabel.text = "\(curTrip.price)"
+        cell.TripPriceLabel.text = "$\(curTrip.price).00"
         for index in 1...curTrip.stars {
             checkStars = "⭐️" + checkStars;
         }
