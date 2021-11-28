@@ -107,6 +107,27 @@
             </objects>
             <point key="canvasLocation" x="3682.608695652174" y="137.94642857142856"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="pUj-Vv-rTJ">
+            <objects>
+                <viewController id="sAP-rK-yF3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wow-HG-tYq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bLV-Dv-lnd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" springLoaded="YES" id="Vq0-Kc-d6H">
+                        <imageReference key="image" image="person.fill" catalog="system" symbolScale="default" renderingMode="original"/>
+                        <color key="badgeColor" systemColor="labelColor"/>
+                        <imageReference key="selectedImage" image="person.fill" catalog="system" symbolScale="default" renderingMode="original"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="abJ-BW-4ky"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zV3-hg-RiC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2403" y="864"/>
+        </scene>
         <!--second-->
         <scene sceneID="f3P-vB-ks1">
             <objects>
@@ -223,6 +244,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="WzJ-e7-lhj" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Gcz-hC-qkC"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DPR-FZ-PkD">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -233,6 +255,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="eCF-Pj-s7j"/>
                         <segue destination="IMF-ca-kmN" kind="relationship" relationship="viewControllers" id="fE8-oT-Z1a"/>
+                        <segue destination="sAP-rK-yF3" kind="relationship" relationship="viewControllers" id="PxB-RG-h6F"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TpI-1g-mVn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -245,6 +268,10 @@
         <image name="first" width="1000" height="371"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="lineweight" catalog="system" width="128" height="110"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
