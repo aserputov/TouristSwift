@@ -156,4 +156,10 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.MyTable2.reloadData()
         
     }
+//    @IBAction func Go(_ sender: Any) {
+//        guard let screen3 = storyboard?.instantiateViewController(identifier: "ProfileViewController") as? ProfileViewController else {
+//            return
+//        }
+//        show(screen3, sender: self)
+//    }
 }

@@ -22,7 +22,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationLevel="2" indentationWidth="23" reuseIdentifier="myCell" rowHeight="125" translatesAutoresizingMaskIntoConstraints="NO" id="FBr-1q-rUW" customClass="TripTableViewCell" customModule="Tourist" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationLevel="2" indentationWidth="23" reuseIdentifier="myCell" rowHeight="125" translatesAutoresizingMaskIntoConstraints="NO" id="FBr-1q-rUW" customClass="TripTableViewCell" customModule="Tourist" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FBr-1q-rUW" id="YkG-RS-ltH">
@@ -110,8 +110,8 @@
         <!--Profile-->
         <scene sceneID="pUj-Vv-rTJ">
             <objects>
-                <viewController id="sAP-rK-yF3" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Wow-HG-tYq">
+                <viewController id="sAP-rK-yF3" customClass="ProfileViewController" customModule="Tourist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="ProfileViewController" id="Wow-HG-tYq" customClass="Profile">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

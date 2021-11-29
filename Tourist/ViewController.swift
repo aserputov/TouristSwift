@@ -69,22 +69,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cell.TripTitleLabel.text = "\(curTrip.title)"
         cell.TripPriceLabel.text = "$\(curTrip.price).00"
-        print(curTrip.photoLink)
-        let image: UIImage = UIImage(named: "\(curTrip.photoLink)")!
-        cell.TripImgLabel = UIImageView(image: image)
+//        print(curTrip.photoLink)
+//        let image: UIImage = UIImage(named: "\(curTrip.photoLink)")!
+//        cell.TripImgLabel = UIImageView(image: image)
 //        cell.TripImgLabel!.frame = CGRectMake(0,0,100,200)
-        self.view.addSubview(cell.TripImgLabel!)
-//        if(curTrip.title == "New York, USA"){
-//            cell.TripImgLabel.image = #imageLiteral(resourceName: "4038c700-61d2-11e9-805e-2d39adbf13ca.png")
-//        }else if(curTrip.title == "Berlin, Germany"){
-//
-//        }else if(curTrip.title == "Toronto, Canada"){
-//
-//        }else if(curTrip.title == "Halifax, Canada"){
-//
-//        }else{
-//
-//        }
+//        self.view.addSubview(cell.TripImgLabel!)
+        if(curTrip.title == "New York, USA"){
+            cell.TripImgLabel.image = #imageLiteral(resourceName: "second")
+        }else if(curTrip.title == "Berlin, Germany"){
+            cell.TripImgLabel.image = #imageLiteral(resourceName: "third")
+        }else if(curTrip.title == "Toronto, Canada"){
+            cell.TripImgLabel.image = #imageLiteral(resourceName: "fourth")
+        }else if(curTrip.title == "Halifax, Canada"){
+            cell.TripImgLabel.image = #imageLiteral(resourceName: "fifth")
+        }else{
+            cell.TripImgLabel.image = #imageLiteral(resourceName: "first")
+        }
 //        cell.TripImgLabel.image = #imageLiteral(resourceName: "4038c700-61d2-11e9-805e-2d39adbf13ca.png")
 //        cell.TripImgLabel.image = #imageLiteral(resourceName: "first")
         for index in 1...curTrip.stars {
