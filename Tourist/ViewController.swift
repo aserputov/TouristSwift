@@ -77,9 +77,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if(curTrip.title == "New York, USA"){
             cell.TripImgLabel.image = #imageLiteral(resourceName: "second")
         }else if(curTrip.title == "Berlin, Germany"){
-            cell.TripImgLabel.image = #imageLiteral(resourceName: "third")
+            cell.TripImgLabel.image = #imageLiteral(resourceName: "image")
         }else if(curTrip.title == "Toronto, Canada"){
-            cell.TripImgLabel.image = #imageLiteral(resourceName: "fourth")
+            cell.TripImgLabel.image = #imageLiteral(resourceName: "third")
         }else if(curTrip.title == "Halifax, Canada"){
             cell.TripImgLabel.image = #imageLiteral(resourceName: "fifth")
         }else{
